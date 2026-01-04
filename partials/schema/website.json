@@ -1,0 +1,13 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Acre Immigration Site",
+  "url": "https://immigratetobrazil.com/ac/",
+  "description": "Acre is a state in the Amazon region of Brazil, known for its biodiversity and rubber history.",
+  "keywords": [
+    "Acre Brazil",
+    "Amazon Acre",
+    "Rio Branco"
+  ],
+  "inLanguage": "en"
+}
