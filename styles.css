@@ -1,11 +1,11 @@
 body {
     margin: 0;
-    font-family: Open Sans, sans-serif;
+    font-family: Open Sans;
     background: #F5F5DC;
     color: #2F4F4F;
 }
 h1, h2 {
-    font-family: Montserrat, serif;
+    font-family: Montserrat;
     color: #8B4513;
 }
 a {
