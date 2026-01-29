@@ -1,52 +1,15 @@
-<nav class="mobile-nav md:hidden" aria-label="Mobile navigation">
-    <button aria-expanded="false" aria-controls="mobile-menu" class="w-full px-4 py-2 bg-[#8B4513] text-white rounded flex justify-between items-center">Menu <i class="fas fa-chevron-down"></i></button>
-    <ul id="mobile-menu" class="hidden flex flex-col bg-white shadow-md rounded-md mt-1 overflow-auto max-h-[80vh]">
-        <li><a href="/" class="block px-4 py-2 hover:bg-[#FFD700]/10">Home</a></li>
-        <li>
-            <button class="w-full text-left px-4 py-2 hover:bg-[#FFD700]/10 flex justify-between items-center" aria-expanded="false" aria-controls="services-sub">Services <i class="fas fa-chevron-down"></i></button>
-            <ul id="services-sub" class="hidden pl-4">
-                <li class="font-bold py-1">Travel Services</li>
-                
-                <li class="font-bold py-1 mt-2">Brazilian Visas</li>
-                <li><a href="/visas/artistic-visa" class="block py-2 pl-4 hover:bg-[#FFD700]/10" title="Artistic Visa">Artistic Visa</a></li>
-                <li class="font-bold py-1 mt-2">Residency Permits</li>
-                
-                <li class="font-bold py-1 mt-2">Citizenship & Naturalisation</li>
-                
-                <li class="font-bold py-1 mt-2">Other Services</li>
-                
-            </ul>
-        </li>
-        <li>
-            <button class="w-full text-left px-4 py-2 hover:bg-[#FFD700]/10 flex justify-between items-center" aria-expanded="false" aria-controls="explore-sub">Explore Acre <i class="fas fa-chevron-down"></i></button>
-            <ul id="explore-sub" class="hidden pl-4">
-                <li><a href="/explore/palácio-rio-branco" class="block py-2 pl-4 hover:bg-[#FFD700]/10" title="Palácio Rio Branco">Palácio Rio Branco</a></li><li><a href="/explore/casa-de-chico-mendes" class="block py-2 pl-4 hover:bg-[#FFD700]/10" title="Casa de Chico Mendes">Casa de Chico Mendes</a></li><li><a href="/explore/catedral-de-nazaré" class="block py-2 pl-4 hover:bg-[#FFD700]/10" title="Catedral de Nazaré">Catedral de Nazaré</a></li><li><a href="/explore/amazon-rainforest" class="block py-2 pl-4 hover:bg-[#FFD700]/10" title="Amazon rainforest">Amazon rainforest</a></li><li><a href="/explore/acre-river" class="block py-2 pl-4 hover:bg-[#FFD700]/10" title="Acre River">Acre River</a></li><li><a href="/explore/serra-do-divisor-national-park" class="block py-2 pl-4 hover:bg-[#FFD700]/10" title="Serra do Divisor National Park">Serra do Divisor National Park</a></li><li><a href="/explore/serra-do-divisor-national-park" class="block py-2 pl-4 hover:bg-[#FFD700]/10" title="Serra do Divisor National Park">Serra do Divisor National Park</a></li><li><a href="/explore/chico-mendes-extractive-reserve" class="block py-2 pl-4 hover:bg-[#FFD700]/10" title="Chico Mendes Extractive Reserve">Chico Mendes Extractive Reserve</a></li><li><a href="/explore/tacacá" class="block py-2 pl-4 hover:bg-[#FFD700]/10" title="Tacacá">Tacacá</a></li><li><a href="/explore/pirarucu-de-casaca" class="block py-2 pl-4 hover:bg-[#FFD700]/10" title="Pirarucu de casaca">Pirarucu de casaca</a></li><li><a href="/explore/açaí-na-tigela" class="block py-2 pl-4 hover:bg-[#FFD700]/10" title="Açaí na tigela">Açaí na tigela</a></li><li><a href="/explore/pato-no-tucupi" class="block py-2 pl-4 hover:bg-[#FFD700]/10" title="Pato no tucupi">Pato no tucupi</a></li><li><a href="/explore/maniçoba" class="block py-2 pl-4 hover:bg-[#FFD700]/10" title="Maniçoba">Maniçoba</a></li>
-            </ul>
-        </li>
-        <li><a href="/contact" class="block px-4 py-2 hover:bg-[#FFD700]/10">Contact</a></li>
-        <li><a href="/faq" class="block px-4 py-2 hover:bg-[#FFD700]/10">FAQ</a></li>
-        <li><a href="/blog" class="block px-4 py-2 hover:bg-[#FFD700]/10">Blog</a></li>
-        <li><a href="/about" class="block px-4 py-2 hover:bg-[#FFD700]/10">About</a></li>
-    </ul>
-    <script>
-        const menuBtn = document.querySelector('.mobile-nav button');
-        const menu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => {
-            const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
-            menuBtn.setAttribute('aria-expanded', !expanded);
-            menu.classList.toggle('hidden');
-            menuBtn.querySelector('i').classList.toggle('fa-chevron-down');
-            menuBtn.querySelector('i').classList.toggle('fa-chevron-up');
-        });
-        document.querySelectorAll('.mobile-nav li button').forEach(subBtn => {
-            subBtn.addEventListener('click', () => {
-                const expanded = subBtn.getAttribute('aria-expanded') === 'true';
-                subBtn.setAttribute('aria-expanded', !expanded);
-                const subMenu = document.getElementById(subBtn.getAttribute('aria-controls'));
-                subMenu.classList.toggle('hidden');
-                subBtn.querySelector('i').classList.toggle('fa-chevron-down');
-                subBtn.querySelector('i').classList.toggle('fa-chevron-up');
-            });
-        });
-    </script>
+<nav class="mobile-nav hidden" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+    <div class="mobile-nav-content">
+        <button class="mobile-nav-close" aria-label="Close menu">&times;</button>
+        <ul class="mobile-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="mobile-dropdown">
+                <button class="mobile-dropdown-toggle">Services ▼</button>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="services/guided-trips.html">Guided Trips</a></li>\n                    <li><a href="services/naturalisation.html">Naturalisation</a></li>\n                    <li><a href="services/other-services.html">Other Services</a></li>\n                    <li><a href="services/residencies.html">Residencies</a></li>\n                    <li><a href="services/visas.html">Visas</a></li>\n                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
 </nav>
